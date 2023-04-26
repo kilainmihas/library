@@ -1,0 +1,21 @@
+    <!-- 本頁為網頁樣板 可以把每個網頁預設的設定設置在這 再套用到各別網頁上 -->
+    {% if user.is_authenticated %}  <!-- 下列是 jinja寫法 驗證是否通過 -->
+    Login in :{{ user.username }} &nbsp;&nbsp; <a href="{% url 'logout' %}">Logout</a> 
+    <br>
+    Now time :{% now "SHORT_DATETIME_FORMAT" %}
+    <br>
+
+    
+    <a href="{% url 'todolist' %}">List</a>&nbsp;
+    <a href="{% url 'completed' %}">Completed</a>&nbsp;
+    <a href="{% url 'createtodo' %}">Create</a>&nbsp;
+    {% else %}
+    <a href="{% url 'register' %}">Register</a>
+    <a href="{% url 'login' %}">Login</a>
+    
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    <hr>
+    <a href="{% url 'login' %}">Home</a>

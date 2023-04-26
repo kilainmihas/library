@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>View Todo</title>
+</head>
+<body>
+    
+    {% block content %}
+        <h1>View Todo</h1>
+        <p>{{ todo.title }}</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+        <h3>{{ form.as_p }}</h3>
+        <p><button type="submit">更新</button></p>
+        </form>
+        <p class="message">{{ message }}</p>
+
+        <form action="{% url 'completetodo' todo.id %}" method = "POST">
+            {% csrf_token %}
+            <button type="submit">完成</button>
+        </form>
+
+        <form action="{% url 'deletetodo' todo.id %}" method = "POST">
+            {% csrf_token %}
+            <button type="submit">刪除</button>
+        </form>
+    {% endblock %}
+</body>
+</html>

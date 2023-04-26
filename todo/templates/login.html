@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% if user.is_authenticated %} 
+    Login in :{{ user.username }} <br>
+    Now time :{{ time }}<br>
+    <a href="{% url 'todolist' %}">todolist</a><br>
+    <p><b style="text-align: cneter ; color:red;  ">個人作品，僅供練習使用</b></p>
+    <a href="{% url 'generator' %}">Password Generator</a><br>
+    <a href="{% url 'lottery' %}">Lotto Generator</a><br>
+    <a href="{% url 'bmi' %}">Bmi Calculator</a><br>
+    <a href="{% url 'gym' %}">Gym Web</a><br>
+    <a href="{% url 'gym1' %}">Gym test</a><br>
+    <a href="{% url 'card' %}">Luck Card</a><br>
+    <a href="{% url 'logout' %}">Logout</a> 
+    {% else %}
+    
+    <h1>Login</h1>
+    <p class="time">當前時間:{{ time }}</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">帳號</label>
+        <input type="text" name="username">
+        <br>
+        <label for="">密碼</label>
+        <input type="password" name="password">
+        <p>
+            <input type="submit" value="登入" name="login"></button>
+            <input type="submit" value="註冊" name="register"></button>
+       
+        </p>
+    </form>
+    <p class="message"> {{ message }}</p>
+    {% endif %}
+</body>
+</html>

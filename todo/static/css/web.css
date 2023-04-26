@@ -1,0 +1,140 @@
+body {
+    background: cornsilk;
+    font-family: Microsoft JhengHei, 'Times New Roman', Times, serif;
+
+}
+
+.banner {
+    color: rgb(163, 19, 199);
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    height: 100;
+    text-align: center;
+    font-size: 32px;
+    border-radius: 10px;
+    border: 2px rgb(0, 0, 0) solid;
+}
+
+.text-1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 20px;
+}
+
+.text-2 {
+    background-color: rgb(68, 178, 230);
+    color: rgb(0, 0, 0);
+    border: 2px solid snow;
+    padding: 0px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sub-title {
+    background-color: #4f5e80;
+    border-radius: 10px;
+    color: snow;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+#picture {
+    text-align: center;
+}
+
+#picture img {
+    border-radius: 10px;
+    margin: 0px 5px;
+
+}
+
+#container {
+    width: 80%;
+    margin: 0px auto;
+
+}
+
+.block-1 {
+    text-align: center;
+
+}
+
+.block-1 ol {
+    list-style-type: none;
+    border: 4px dashed black;
+    padding: 10px 0px;
+}
+
+.block-2 {
+    font-size: 20px;
+    font-style: italic;
+    background-color: darksalmon;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.block-2 a {
+    color: rgb(56, 133, 158);
+}
+
+
+.block-3 table {
+    border: 1px solid black;
+    width: 90%;
+    margin: 0px auto;
+    height: 300px;
+    font-size: 20px;
+}
+
+.block-3>table>thead>tr>th {
+    background-color: rgb(216, 178, 28);
+}
+
+.block-3 tr {
+    background-color: pink;
+    text-align: center;
+    font-size: 16px;
+}
+
+.block-4 {
+    background-color: powderblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.block-4 form {
+    background-color: red;
+    padding-top: 20px 0px;
+
+}
+
+input,
+textarea {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+input[type="button"] {
+    width: 100px;
+    background-color: rgb(70, 134, 9);
+    color: white;
+}
+
+
+.footer {
+    text-align: center;
+}
+
+#idol {
+    padding: 20px;
+
+}
+
+#idol img {
+    border-radius: 20px;
+    float: right;
+    margin: 20px;
+}

@@ -1,0 +1,25 @@
+<!-- 下列代表繼承自某個網頁樣板 繼承語法 -->
+{% extends 'base.html' %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed List</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Completed Todo</h1>
+    <ul>
+        {% for todo in todos %}
+            {% if  todo.date_completed %}
+                <a href="{% url 'viewtodo' todo.id %}">
+                        <li>{{todo.title}}</li>  
+                </a>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* *代表全域設定
+    前綴.代表class
+    前綴#代表id
+*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 20px;
+    background-color: rgb(221, 58, 58);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#banner {
+    width: 300px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: rgb(34, 201, 145);
+    color: aliceblue;
+    font-weight: bold;
+
+}
+
+.showtime {
+    margin-top: 20px;
+    color: white;
+}
+
+table {
+    width: 320px;
+    margin: 20px auto;
+    border: 2px violet solid;
+    font-size: 20px;
+    color: white;
+}
+
+.btn-el {
+    margin-top: 40px;
+    width: 80px;
+    background-color: green;
+    font-size: large;
+    color: white;
+}
+
+.changecolor {
+    font-size: 20px;
+}
+
+td {
+    padding: 5px;
+}
+
+/*last-child代表最後一個子元素
+   first-child代表第一個
+*/
+td:last-child {
+    background-color: tomato;
+
+}
+
+/*
+RWD寫法
+會根據設定的螢幕大小改變內容大小
+*/
+@media screen and(max-width:640px) {
+    #banner {
+        width: 200px;
+        font-size: 24px;
+    }
+
+    table {
+        width: 220px;
+        font-size: 12px;
+    }
+
+    .btn-el {
+        margin-top: 20px;
+    }
+
+}

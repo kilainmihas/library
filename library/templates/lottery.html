@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/lottery.css' %}">
+    <title>Lotto Generator</title>
+
+</head>
+
+<body onload="getTime()">
+    <div class="container">
+        <div id="banner">
+            大樂透Bingo!!
+        </div>
+        <select name="numner-count" id="count-el">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button class="btn-el">開獎!</button>
+        <div>
+            <h3 class="showtime">Now Time</h3>
+            <table border="1" id="table-el">
+                <tr>
+                    <td>$$</td>
+                    <td>$$</td>
+                    <td>$$</td>
+                    <td>$$</td>
+                    <td>$$</td>
+                    <td>$$</td>
+                    <td>$$</td>
+                </tr>
+            </table>
+        </div>
+
+        <button class="changecolor">Change Color</button>
+        <script src="{% static 'js/index.js' %}"></script>
+    </div>
+    <hr>
+    <a href="{% url 'login' %}">home</a>
+</body>
+
+</html>

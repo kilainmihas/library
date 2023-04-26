@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/web.css' %}">
+
+    <style>
+        form {
+            text-align: center;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        @media screen and (max-width:1920px) {
+            form {
+                padding: 20px 60px;
+            }
+
+            label,
+            input,
+            button {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+
+            label,
+            input,
+            button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="banner">BMI Calculator</div>
+        <form action="">
+            <label for="name">姓名:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="height">身高:</label>
+            <input type="number" name="height" id="height">
+            <br>
+            <label for="weight">體重:</label>
+            <input type="number" name="weight" id="weight">
+            <br>
+            <p class="result">BMI:</p>
+            <input type="button" id="count" value="計算" onclick="calc()"></button> 
+            <!-- onclick用來呼叫函式 -->
+        </form>
+    </div>
+    <script src="{% static 'js/bmi.js' %}"></script>
+</body>
+
+</html>
